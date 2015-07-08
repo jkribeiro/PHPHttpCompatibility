@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<ruleset name="PHPHttpCompatibility">
+ <description>Coding Standard that checks for PHP PECL http extension compatibility between 1.x and 2.x versions.</description>
+</ruleset>
+

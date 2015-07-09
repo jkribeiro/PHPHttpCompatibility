@@ -27,7 +27,7 @@ class PHPHttpCompatibility_Sniffs_Http_DeprecatedFunctionsSniff extends Generic_
      *
      * @var array(string => string|null)
      */
-    protected $forbiddenFunctions = array(
+    public $forbiddenFunctions = array(
                                      'http_cache_last_modified'       => null,
                                      'http_chunked_decode'            => null,
                                      'http_deflate'                   => null,

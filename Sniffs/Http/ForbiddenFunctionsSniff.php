@@ -1,6 +1,6 @@
 <?php
 /**
- * PHPHttpCompatibility_Sniffs_Http_DeprecatedFunctionsSniff.
+ * PHPHttpCompatibility_Sniffs_Http_ForbiddenFunctionsSniff.
  *
  * PHP version 5
  *
@@ -16,7 +16,7 @@
  * @package  PHP_CodeSniffer
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  */
-class PHPHttpCompatibility_Sniffs_Http_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
+class PHPHttpCompatibility_Sniffs_Http_ForbiddenFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
 {
 
     /**
@@ -85,7 +85,7 @@ class PHPHttpCompatibility_Sniffs_Http_DeprecatedFunctionsSniff extends Generic_
      *
      * @var bool
      */
-    public $error = false;
+    public $error = true;
 
 }//end class
 

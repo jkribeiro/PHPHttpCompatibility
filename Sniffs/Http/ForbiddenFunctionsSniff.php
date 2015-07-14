@@ -20,7 +20,7 @@ class PHPHttpCompatibility_Sniffs_Http_ForbiddenFunctionsSniff extends Generic_S
 {
 
     /**
-     * A list of deprecated functions with their alternatives.
+     * A list of deprecated functions.
      *
      * The value is NULL if no alternative exists, i.e., the function should
      * just not be used.
@@ -81,11 +81,24 @@ class PHPHttpCompatibility_Sniffs_Http_ForbiddenFunctionsSniff extends Generic_S
                                     );
 
     /**
-     * If true, an error will be thrown; otherwise a warning.
+     * Generates the error for this sniff.
      *
-     * @var bool
+     * @param PHP_CodeSniffer_File $phpcsFile The file being scanned.
+     * @param int                  $stackPtr  The position of the forbidden function
+     *                                        in the token array.
+     * @param string               $function  The name of the forbidden function.
+     * @param string               $pattern   The pattern used for the match.
+     *
+     * @return void
      */
-    public $error = true;
+    protected function addError($phpcsFile, $stackPtr, $function, $pattern=null)
+    {
+      $data  = array($function);
+      $error = 'The use of function %s() is forbidden for HTTP extension Version 2 ';
+
+      $phpcsFile->addError($error, $stackPtr, 'Found', $data);
+
+    }//end addError()
 
 }//end class
 

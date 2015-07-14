@@ -91,7 +91,7 @@ class PHPHttpCompatibility_Sniffs_Http_ForbiddenClassesSniff implements PHP_Code
      */
     protected function addError($phpcsFile, $stackPtr, $className)
     {
-      $error = 'The use of class %s() is forbidden ';
+      $error = 'The use of class "%s()" is forbidden for HTTP extension Version 2 ';
 
       $phpcsFile->addError($error, $stackPtr, 'Found', $className);
 
